@@ -6,7 +6,7 @@ FROM openjdk:8-jdk-alpine
 EXPOSE 8091
 
 # The application's jar file
-ARG JAR_FILE=target/gs-spring-boot-docker-0.1.0.jar
+ARG JAR_FILE=target/spring-boot-docker-0.1.0.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} main.jar

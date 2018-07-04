@@ -12,5 +12,9 @@ node {
     stage('Building Jarfile'){
         sh '/usr/local/apache-maven-3.5.4/bin/mvn package'
     }
+    stage('Create docker image'){
+        sh 'sudo /usr/local/bin/docker build -t spring-boot-docker .'
+
+    }
 
 }
