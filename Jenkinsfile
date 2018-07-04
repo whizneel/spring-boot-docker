@@ -7,7 +7,7 @@ node {
         checkout scm
     }
     stage('Test Image'){
-        sh 'mvn test'
+        sh '/usr/local/apache-maven-3.5.4/bin/mvn test'
     }
 
 }
