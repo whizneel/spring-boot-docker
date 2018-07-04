@@ -6,5 +6,8 @@ node {
         echo 'kalpesh'
         checkout scm
     }
+    stage('Test Image'){
+        mvn test
+    }
 
 }
