@@ -7,7 +7,7 @@ node {
         checkout scm
     }
     stage('Test Image'){
-        mvn test
+        sh 'mvn test'
     }
 
 }
