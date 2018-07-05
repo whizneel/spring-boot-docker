@@ -13,7 +13,7 @@ node {
         sh 'mvn package'
     }
     stage('Create docker image'){
-        sh 'sudo /usr/local/bin/docker build -t spring-boot-docker .'
+        sh 'docker build -t spring-boot-docker .'
     }
     stage('Pushing docker image'){
         sh 'sudo /usr/local/bin/docker login --username=ksaubhri --password=kalpesh482'
