@@ -7,10 +7,10 @@ node {
         checkout scm
     }
     stage('Test Image'){
-        sh '/usr/local/apache-maven-3.5.4/bin/mvn test'
+        sh 'mvn test'
     }
     stage('Building Jarfile'){
-        sh '/usr/local/apache-maven-3.5.4/bin/mvn package'
+        sh 'mvn package'
     }
     stage('Create docker image'){
         sh 'sudo /usr/local/bin/docker build -t spring-boot-docker .'
