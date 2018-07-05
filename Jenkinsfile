@@ -16,10 +16,10 @@ node {
         sh 'docker build -t spring-boot-docker .'
     }
     stage('Pushing docker image'){
-        sh 'sudo /usr/local/bin/docker login --username=ksaubhri --password=kalpesh482'
+        sh 'docker login --username=ksaubhri --password=kalpesh482'
         echo 'login successfully'
-        sh "echo ${env.user_name}"
-        sh 'sudo /usr/local/bin/docker tag spring-boot-docker ksaubhri/spring-boot-docker'
+        sh 'docker tag spring-boot-docker ksaubhri/spring-boot-docker'
+        sh 'docker push ksaubhri/spring-boot-docker'
         echo 'push successfull'
     }
 
