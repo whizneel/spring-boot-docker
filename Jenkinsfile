@@ -18,7 +18,7 @@ node {
     stage('Pushing docker image'){
         sh 'sudo /usr/local/bin/docker login --username=ksaubhri --password=kalpesh482'
         echo 'login successfully'
-        echo ${user_name}
+        echo ${env.user_name}
         sh 'sudo /usr/local/bin/docker tag spring-boot-docker ksaubhri/spring-boot-docker'
         echo 'push successfull'
     }
