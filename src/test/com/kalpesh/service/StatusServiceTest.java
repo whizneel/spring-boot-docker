@@ -24,6 +24,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 public class StatusServiceTest {
@@ -54,13 +55,13 @@ public class StatusServiceTest {
     @Test
     public void getStatusWhenCorrectInformationSupplied() throws Exception {
 
-        String url = "http://mockito.com";
-        HttpHeaders headers = new HttpHeaders();
+        String url = "http://cricapi.com/api/cricketScore";
         Map<String, String> body = new LinkedHashMap<String, String>();
         body.put("unique_id", statusRequestBody.getUnique_id());
+        StatusResponseBody responseBody = getresponseBody();
         body.put("apikey", statusRequestBody.getApikey());
-        when(restProcessorClient.process(url, null, new Gson().toJson(body), StatusResponseBody.class, HttpMethod.POST)).
-                thenReturn(getresponseBody());
+        when((StatusResponseBody)restProcessorClient.process(any(), any(), any(), any(), any())).
+                thenReturn(responseBody);
 
         StatusResponseBody expectedResponseBody = getresponseBody();
 
