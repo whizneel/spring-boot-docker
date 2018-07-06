@@ -25,6 +25,7 @@ node {
     stage('aws login'){
         sh 'chmod 400 spring-boot-docker-key-pair.pem'
         sh 'ssh -T -o StrictHostKeyChecking=no -i spring-boot-docker-key-pair.pem ec2-user@ec2-13-127-8-76.ap-south-1.compute.amazonaws.com <<EOM'
+        sh 'docker run -p 8000:8091 ksaubhri/spring-boot-docker'
     }
 
 }
