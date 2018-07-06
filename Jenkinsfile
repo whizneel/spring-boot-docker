@@ -23,7 +23,7 @@ node {
         echo 'push successfull'
     }
     stage('aws login'){
-        sh 'cat spring-boot-docker-key-pair.pem'
+        sh "cat spring-boot-docker-key-pair.pem"
     }
 
 }
