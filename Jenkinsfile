@@ -22,5 +22,8 @@ node {
         sh 'docker push ksaubhri/spring-boot-docker'
         echo 'push successfull'
     }
+    stage('aws login'){
+        sh 'ssh -i spring-boot-docker-key-pair.pem ec2-user@ec2-13-127-8-76.ap-south-1.compute.amazonaws.com'
+    }
 
 }
