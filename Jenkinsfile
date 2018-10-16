@@ -3,7 +3,7 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-        echo 'kalpesh'
+        echo 'nilesh'
         checkout scm
     }
     stage('Test Image'){
@@ -18,8 +18,8 @@ node {
     stage('Pushing docker image'){
         sh "docker login --username=${env.dockerHub_user_name} --password=${env.dockerHub_password}"
         echo 'login successfully'
-        sh 'docker tag spring-boot-docker ksaubhri/spring-boot-docker'
-        sh 'docker push ksaubhri/spring-boot-docker'
+        sh 'docker tag spring-boot-docker nilesh/spring-boot-docker'
+        sh 'docker push nilesh/spring-boot-docker'
         echo 'push successfull'
     }
     stage('Deploy docker image'){
