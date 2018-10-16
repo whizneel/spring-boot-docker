@@ -1,4 +1,4 @@
-package com.kalpesh.responseBody;
+package com.nilesh.responseBody;
 
 public class StatusProviderResponseBody {
     public String getSource() {

@@ -1,4 +1,4 @@
-package com.kalpesh.commonUtil;
+package com.nilesh.commonUtil;
 
 
 import org.json.JSONException;

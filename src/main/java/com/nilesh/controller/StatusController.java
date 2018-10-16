@@ -1,7 +1,7 @@
-package com.kalpesh.controller;
+package com.nilesh.controller;
 
-import com.kalpesh.requestBody.StatusRequestBody;
-import com.kalpesh.service.StatusService;
+import com.nilesh.requestBody.StatusRequestBody;
+import com.nilesh.service.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

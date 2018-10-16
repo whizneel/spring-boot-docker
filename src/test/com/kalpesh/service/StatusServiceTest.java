@@ -1,11 +1,11 @@
-package com.kalpesh.service;
+package com.nilesh.service;
 
 
 import com.google.gson.Gson;
-import com.kalpesh.commonUtil.RestProcessorClient;
-import com.kalpesh.requestBody.StatusRequestBody;
-import com.kalpesh.responseBody.StatusProviderResponseBody;
-import com.kalpesh.responseBody.StatusResponseBody;
+import com.nilesh.commonUtil.RestProcessorClient;
+import com.nilesh.requestBody.StatusRequestBody;
+import com.nilesh.responseBody.StatusProviderResponseBody;
+import com.nilesh.responseBody.StatusResponseBody;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -83,7 +83,7 @@ public class StatusServiceTest {
     private StatusResponseBody getresponseBody() {
         StatusResponseBody responseBody = new StatusResponseBody();
         StatusProviderResponseBody providerResponseBody = new StatusProviderResponseBody();
-        responseBody.setCache("kalpesh");
+        responseBody.setCache("nilesh");
         responseBody.setScore("178");
         providerResponseBody.setSource("test");
         providerResponseBody.setUrl("http://payumoney.com");

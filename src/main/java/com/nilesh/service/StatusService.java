@@ -1,8 +1,8 @@
-package com.kalpesh.service;
+package com.nilesh.service;
 import com.google.gson.Gson;
-import com.kalpesh.commonUtil.RestProcessorClient ;
-import com.kalpesh.requestBody.StatusRequestBody;
-import com.kalpesh.responseBody.StatusResponseBody;
+import com.nilesh.commonUtil.RestProcessorClient ;
+import com.nilesh.requestBody.StatusRequestBody;
+import com.nilesh.responseBody.StatusResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;

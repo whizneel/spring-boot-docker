@@ -1,4 +1,4 @@
-package com.kalpesh.requestBody;
+package com.nilesh.requestBody;
 
 
 public class StatusRequestBody {
